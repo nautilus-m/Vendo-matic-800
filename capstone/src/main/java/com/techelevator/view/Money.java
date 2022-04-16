@@ -30,22 +30,23 @@ public class Money extends MoneyAccepted {
     }
 
     public void depositMoney() {
+        System.out.println("Please enter dollar bills to continue" +
+                " (bills accepted are $1, $2, $5, $10, & $20)");
         String input = scanner.nextLine();
         double moneyReceived = Double.parseDouble(input);
-        System.out.println("Please enter dollar bills to continue (bills accepted are $1, $2, $5, $10, & $20)");
-        if (moneyReceived <= billsAccepted.TWENTY_DOLLAR.getBillValue()) {
+        if (moneyReceived <= billsAccepted.TWENTY_DOLLAR.getBillValue() ) {
             if (moneyReceived == billsAccepted.TWENTY_DOLLAR.getBillValue()) {
                 moneyTracker += moneyReceived;
-            } else if (moneyReceived <= billsAccepted.TEN_DOLLAR.getBillValue()) {
+            } else if (moneyReceived == billsAccepted.TEN_DOLLAR.getBillValue()) {
                 moneyTracker += moneyReceived;
-            } else if (moneyReceived <= billsAccepted.FIVE_DOLLAR.getBillValue()) {
+            } else if (moneyReceived == billsAccepted.FIVE_DOLLAR.getBillValue()) {
                 moneyTracker += moneyReceived;
-            } else if (moneyReceived <= billsAccepted.TWO_DOLLAR.getBillValue()) {
+            } else if (moneyReceived == billsAccepted.TWO_DOLLAR.getBillValue()) {
                 moneyTracker += moneyReceived;
             } else if (moneyReceived == billsAccepted.ONE_DOLLAR.getBillValue()) {
                 moneyTracker += moneyReceived;
             }
-            Log.log("Money Received");
+            Log.log("MONEY RECEIVED:");
         } else {
             System.out.println("Please enter a valid dollar amount.");
         }

@@ -101,10 +101,12 @@ public class Inventory extends Item {
 
 
     public void selectionMenu() {
+
         for(Map.Entry<String, String> map : itemsByID.entrySet()) {
 
-            System.out.println(map.getKey() + ", " + map.getValue());
+            System.out.println(map.getKey() + "|" + map.getValue());
         }
+        System.out.println("Please enter the two character slot identifier of the item you wish to purchase: "  ); // Moved sysout from Menu display to this method
     }
     public void deduct() {// need this method to deduct quantity purchased from inventory quantity
         int count = inventoryCount.get(getItemName());
@@ -114,7 +116,7 @@ public class Inventory extends Item {
     public boolean checkBalanceVsCost() { //method to tell user how much total request costs & check against balance to see if it is available
         //can be run with every purchase to confirm money available
         Money money = new Money();
-        double price = 0;
+        //double price = 0;
         for (Item item : items) {
             if (item.getItemPrice() != null) {
                 this.cost += Double.parseDouble(item.getItemPrice()) * this.getQuantityRequested();
@@ -138,7 +140,7 @@ public class Inventory extends Item {
             if (!itemsByID.containsKey(secondAttemptToPurchase)) {
                 System.out.println("Second attempt to purchase has failed, please review the menu once more." + "\n");
                 MenuDisplay menuDisplay = new MenuDisplay();
-                menuDisplay.firstUserMenu();
+                menuDisplay.mainMenu();
             }
         }
         request = this.request;
