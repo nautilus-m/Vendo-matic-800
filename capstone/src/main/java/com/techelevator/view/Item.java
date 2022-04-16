@@ -4,11 +4,11 @@ public class Item {
     // Instance variables
     private String slotID;
     private String itemName;
-    private double itemPrice;
+    private String itemPrice;
     private String itemCategory;
     private int  quantity = 5;
     // Constructors
-    public Item(String slotID, String itemName, double itemPrice, String itemCategory, int quantity ) {
+    public Item(String slotID, String itemName, String itemPrice, String itemCategory, int quantity ) {
         this.slotID = slotID;
         this.itemName = itemName;
         this.itemPrice = itemPrice;
@@ -40,11 +40,11 @@ public class Item {
         this.itemName = itemName;
     }
 
-    public double getItemPrice() {
+    public String getItemPrice() {
         return itemPrice;
     }
 
-    public void setItemPrice(double itemPrice) {
+    public void setItemPrice(String itemPrice) {
         this.itemPrice = itemPrice;
     }
 

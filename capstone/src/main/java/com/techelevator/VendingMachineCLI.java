@@ -2,7 +2,18 @@ package com.techelevator;
 
 import com.techelevator.view.Menu;
 
-public class VendingMachineCLI {
+
+
+
+
+
+
+
+
+
+
+
+/* public class VendingMachineCLI {
 
     private static final String MAIN_MENU_OPTION_DISPLAY_ITEMS = "Display Vending Machine Items";
     private static final String MAIN_MENU_OPTION_PURCHASE = "Purchase";
@@ -32,7 +43,7 @@ public class VendingMachineCLI {
         cli.run();
     }
 }
-
+*/
 //// MAIN MENU
 // - runs at the start of the application
 // - three options are presented in this menu
