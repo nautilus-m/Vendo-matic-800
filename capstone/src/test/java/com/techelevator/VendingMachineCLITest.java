@@ -13,51 +13,6 @@ class VendingMachineCLITest {
         Money money = new Money();
     }
 
-
-    @Test
-    void getDispenseItem() {
-    }
-
-    @Test
-    void setDispenseItem() {
-    }
-
-    @Test
-    void getQuanReq() {
-    }
-
-    @Test
-    void setQuanReq() {
-    }
-
-    @Test
-    void getItemRequested() {
-    }
-
-    @Test
-    void setItemRequested() {
-    }
-
-    @Test
-    void getProductQuantityUpdate() {
-    }
-
-    @Test
-    void setProductQuantityUpdate() {
-    }
-
-    @Test
-    void getProducts() {
-    }
-
-    @Test
-    void setProducts() {
-    }
-
-    @Test
-    void getFile() {
-    }
-
     @Test
     void readInventoryFile() {
     }
@@ -72,10 +27,6 @@ class VendingMachineCLITest {
 
     @Test
     void quantityRequested() {
-    }
-
-    @Test
-    void dispenseItem() {
     }
 
     @Test

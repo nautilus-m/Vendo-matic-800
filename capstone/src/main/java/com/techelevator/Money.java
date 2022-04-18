@@ -16,8 +16,8 @@ public class Money {
     }
 
     public boolean purchaseIsCovered(BigDecimal amount) { //if balance is greater than or equal to 0, purchase is covered by funds in machine
-        BigDecimal comparison = this.balance.subtract(amount); //is not currently working - worked once!
-        if (comparison.intValue() <= 0) {
+        BigDecimal comparison = this.balance.subtract(amount);
+        if (comparison.intValue() < 0) {
             Log.writeToAuditLog("User entered insufficient funds for purchase.");
             return false;
         }
@@ -45,14 +45,22 @@ public class Money {
                     return true;
                 }
             }
-            System.out.println("Please enter valid dollar amount: ");
+            System.out.println("Error. Please enter valid dollar amount: "); //out message saying if money was not accepted
             feedMoney();
         } catch (NumberFormatException nfe) {
-            System.err.println("foreign Object it slot");
+            System.err.println("Foreign Object in slot!");
             feedMoney();
         }
 
-        return false; //out message saying if money was not accepted
+        return false;
+    }
+
+    public boolean feedMeMoreMONEY(BigDecimal amount) {
+        if(feedMoney()) {
+            if(!purchaseIsCovered(amount)) {
+                return false;
+            }
+        } return true;
     }
 
     public int[] changeCalculator() {

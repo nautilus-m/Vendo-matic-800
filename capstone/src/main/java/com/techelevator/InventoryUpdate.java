@@ -14,7 +14,6 @@ import java.util.*;
 public class InventoryUpdate {
     List<VendingMachineVends> products = new ArrayList<>();
     Map<String, Integer> productQuantityUpdate = new HashMap<>();
-    String dispenseItem;
     int quanReq;
     String itemRequested;
     private BigDecimal amount = new BigDecimal(0.00);
@@ -27,14 +26,6 @@ public class InventoryUpdate {
 
     public void setAmount(BigDecimal amount) {
         this.amount = amount;
-    }
-
-    public String getDispenseItem() {
-        return dispenseItem;
-    }
-
-    public void setDispenseItem(String dispenseItem) {
-        this.dispenseItem = dispenseItem;
     }
 
     public int getQuanReq() {
@@ -78,7 +69,7 @@ public class InventoryUpdate {
     }
 
     public List<VendingMachineVends> readInventoryFile() throws FileNotFoundException { //exception to handle if our file already existed
-        this.file = new File("C:vendingmachine.csv");
+        this.file = new File("capstone/vendingmachine.csv"); //need to look at this not being hardcoded
         if (!this.file.exists()) {
             throw new FileNotFoundException();
         }
@@ -89,7 +80,7 @@ public class InventoryUpdate {
                 String slotID = lineArr[0]; //passing slotID to array
                 String itemName = lineArr[1]; //passing itemName
                 BigDecimal itemPrice = new BigDecimal(lineArr[2]); //using big decimal to set our price to format correctly
-                String itemCategory = lineArr[3]; //what time of item passed to array
+                String itemCategory = lineArr[3]; //what type of item passed to array
                 VendingMachineVends item = null; // starts us with a null item
                 if (itemCategory.equals("Chip")) {
                     item = new Chip(slotID, itemName, itemPrice, itemCategory); //creates a new item if category matches the parameter in conditional statement using constructor in that class
@@ -101,7 +92,7 @@ public class InventoryUpdate {
                     item = new Gum(slotID, itemName, itemPrice, itemCategory);
                 }
                 products.add(item); //adding our created item to our product list
-                //add log message indicating inventory was updated
+                Log.writeToAuditLog("INVENTORY UPDATED"); //writes update to log
             }
         } catch (FileNotFoundException e) {
             System.err.println("The file does not exist.");
@@ -136,12 +127,21 @@ public class InventoryUpdate {
     }
 
     public int quantityRequested() { //takes in # of items desired
+        int maxRequest = 5;
         Scanner scanner = new Scanner(System.in);
         int requested = scanner.nextInt();
         for (VendingMachineVends quantity : products) {
             if (quantity.getSlotID().equals(itemRequested)) {
                 quanReq += requested;
                 Log.writeToAuditLog("Amount of items requested by user: " + this.quanReq);
+                if(quanReq > maxRequest || quanReq > quantity.getQuantity()) { //quantity requested cannot exceed amount in machine
+                    System.out.println("The amount you are trying to purchase exceeds the available inventory."
+                    + "\n" + "The available amount is only: " + quantity.getQuantity());
+                    Log.writeToAuditLog("Amount of items requested by user exceeded available inventory of " + quantity.getQuantity());
+                    resetQuantityRequested(); //resets count to zero
+                    System.out.println("Please enter amount you wish to purchase: ");
+                    quantityRequested(); //returns user the option to enter a new amount
+                }
             }
         }
         return this.quanReq;
@@ -180,4 +180,8 @@ public class InventoryUpdate {
             }
         } return this.amount;
     }
+    public void resetQuantityRequested() {
+        this.quanReq = 0;
+    }
+
 }

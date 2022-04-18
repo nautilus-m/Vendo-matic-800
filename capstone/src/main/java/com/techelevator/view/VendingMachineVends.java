@@ -7,7 +7,7 @@ public abstract class VendingMachineVends {
     private String itemName;
     private BigDecimal itemPrice;
     private String itemCategory;
-    private int quantity; // should always start at %
+    private int quantity; // should always start at 5
 
     public String getSlotID() {
         return slotID;
@@ -66,9 +66,6 @@ public abstract class VendingMachineVends {
 
     }
 
-    public void deduct() {
-        this.quantity--; //subtracts from quantity every time deduct method is called
-    }
     public abstract String outputMessage();
 
     @Override
