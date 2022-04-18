@@ -64,12 +64,28 @@ class MoneyTest {
     }
 
     @Test
-    public void testChangeCalculator() { //test that output is correct, test that no pennies are returned or dollars (2 tests)
-
+    public void testChangeCalculator() { //test that output is correct, test that no pennies are returned or dollars (2 tests)mo
+    Money money = new Money();
+    BigDecimal remainingChange = new BigDecimal("3.0");
+    money.addBalance(remainingChange);
+    int[] changeArr = {12, 0 ,0};
+    assertArrayEquals(changeArr, money.changeCalculator());
+    }
+    @Test
+    public void changeCalculatorShouldNotReturnPennies() { //test that output is correct, test that no pennies are returned or dollars (2 tests)mo
+    Money money = new Money();
+    BigDecimal moneyToReturn = new BigDecimal("5.37");
+    money.addBalance(moneyToReturn);
+    int[] changeArr = {21, 1 ,0};
+    assertArrayEquals(changeArr, money.changeCalculator());
     }
 
     @Test
     public void testResetFunds() { //test funds reset to zero
-
+        Money money = new Money();
+        BigDecimal moneyToReset = new BigDecimal("5.0");
+        money.addBalance(moneyToReset);
+        money.resetFunds();
+        assertEquals(BigDecimal.ZERO,money.getBalance());
     }
 }
