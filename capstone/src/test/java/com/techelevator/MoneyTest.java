@@ -1,6 +1,6 @@
 package com.techelevator;
 
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
 
@@ -13,9 +13,6 @@ import java.util.NoSuchElementException;
 import static org.junit.jupiter.api.Assertions.*;
 
 class MoneyTest {
-    @BeforeEach
-
-
     @Test
     void purchaseIsCoveredShouldReturnTrue() { //make sure returns only false if less than zero, write test to pass (2 tests)
 
@@ -35,9 +32,7 @@ class MoneyTest {
     }
 
     @Test
-    public void testFeedMoneyExeption() {//test exception thrown and exception passed (2 tests)
-
-
+    public void testFeedMoneyException() {//test exception thrown and exception passed (2 tests)
         assertThrows(NoSuchElementException.class, new Executable() { // since feedMoney() has a recursive catch block instead of a NumberFormatExeception it throws a NoSuchElementException - WIP
              @Override
             public void execute() throws Throwable {
@@ -50,15 +45,24 @@ class MoneyTest {
         });
     }
 
-    @Test
+    @Test //runs, but points back to the feedMoney error since this calls for feedMoney inside the method we're testing
     public void testFeedMeMoreMONEY() { //test that it updates balance & accepts money
+        Money money = new Money();
+        BigDecimal testInput = BigDecimal.valueOf(1);
+        InputStream in = new ByteArrayInputStream(testInput.toBigInteger().toByteArray());
+        System.setIn(in);
+        assertTrue(money.feedMeMoreMONEY(testInput));
+
     }
 
     @Test
     public void testChangeCalculator() { //test that output is correct, test that no pennies are returned or dollars (2 tests)
+
     }
 
     @Test
     public void testResetFunds() { //test funds reset to zero
+        Money money = new Money();
+
     }
 }
