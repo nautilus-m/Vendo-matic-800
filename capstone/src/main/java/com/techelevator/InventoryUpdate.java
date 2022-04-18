@@ -69,7 +69,7 @@ public class InventoryUpdate {
     }
 
     public List<VendingMachineVends> readInventoryFile() throws FileNotFoundException { //exception to handle if our file already existed
-        this.file = new File("capstone/vendingmachine.csv"); //need to look at this not being hardcoded
+        this.file = new File("vendingmachine.csv"); //need to look at this not being hardcoded
         if (!this.file.exists()) {
             throw new FileNotFoundException();
         }
@@ -100,10 +100,11 @@ public class InventoryUpdate {
         return products; //returns the list
     }
 
-    public void displayProducts() {
+    public String displayProducts() {
+        String display = "";
         for (VendingMachineVends product : products) {
-            System.out.println(product.getSlotID() + "|" + product.getItemName() + ", $" + product.getItemPrice() + "\n" + "Available: " + product.getQuantity());
-        }
+            display += product.getSlotID() + "|" + product.getItemName() + ", $" + product.getItemPrice() + "\n" + "Available: " + product.getQuantity();
+        } return display;
     }
 
     public String itemRequested() { //holds slot ID for item to be purchased

@@ -38,13 +38,13 @@ public class VendingMachineCLI {
         while (true) {
             String choice = (String) menu.getChoiceFromOptions(MAIN_MENU_OPTIONS);
             if (choice.equals(MAIN_MENU_OPTION_DISPLAY_ITEMS)) {
-                inventoryUpdate.displayProducts(); // displays vending machine items
+                System.out.println(inventoryUpdate.displayProducts() +"\r"); // displays vending machine items
                 System.out.println("Please select 2 to PURCHASE or 3 to EXIT >>>>> ");
             } else if (choice.equals(MAIN_MENU_OPTION_PURCHASE)) {
                 money.feedMoney(); //take in money
                 System.out.println("Please enter the 2 character slot ID of the item you wish to purchase: "); //take in purchase request (requested slotID)
                 inventoryUpdate.itemRequested(); //stores requested ID to use for dispensing
-                System.out.println("Please enter the amount you wish to purchase : "); //get how many they want
+                System.out.println("Please enter the amount you wish to purchase: "); //get how many they want
                 inventoryUpdate.quantityRequested();
                 inventoryUpdate.findAmount();
                 money.purchaseIsCovered(inventoryUpdate.getAmount()); //true, dispense item with the right message, run deduct balance method, update quantities of items purchased
