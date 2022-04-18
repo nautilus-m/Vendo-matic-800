@@ -6,7 +6,6 @@ import java.io.File;
 import java.util.Scanner;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.jupiter.api.Assertions.*;
 
 class LogTest {
 

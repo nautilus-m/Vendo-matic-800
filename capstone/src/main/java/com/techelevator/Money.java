@@ -5,7 +5,7 @@ import java.math.RoundingMode;
 import java.util.Scanner;
 
 public class Money {
-    private BigDecimal balance = new BigDecimal(0.0);
+    private BigDecimal balance = new BigDecimal("0.0");
 
     public void addBalance(BigDecimal amount) {
         this.balance = this.balance.add(amount);

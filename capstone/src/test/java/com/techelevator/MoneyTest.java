@@ -58,11 +58,6 @@ class MoneyTest {
        });
     }
 
-    @Test //runs, but points back to the feedMoney error since this calls for feedMoney inside the method we're testing
-    public void testFeedMeMoreMONEY() { //test that it updates balance & accepts money
-
-    }
-
     @Test
     public void testChangeCalculator() { //test that output is correct
     Money money = new Money();

@@ -4,11 +4,7 @@ import com.techelevator.view.VendingMachineVends;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.PrintWriter;
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 public class InventoryUpdate {
@@ -16,7 +12,7 @@ public class InventoryUpdate {
     Map<String, Integer> productQuantityUpdate = new HashMap<>();
     int quanReq;
     String itemRequested;
-    private BigDecimal amount = new BigDecimal(0.00);
+    private BigDecimal amount = new BigDecimal("0.00");
 
     File file;
 
