@@ -10,3 +10,14 @@
  04/18/2022 11:11 AM Change dispensed to user: Quarters: 21 Dimes: 1 Nickels: 0
  04/18/2022 11:11 AM Change dispensed to user: Quarters: 21 Dimes: 1 Nickels: 0
  04/18/2022 11:14 AM Change dispensed to user: Quarters: 21 Dimes: 1 Nickels: 0
+ 04/18/2022 11:23 AM Change dispensed to user: Quarters: 12 Dimes: 0 Nickels: 0
+ 04/18/2022 11:38 AM Balance remaining after transaction by customer: 3.0
+ 04/18/2022 11:39 AM Balance remaining after transaction by customer: 3.0
+ 04/18/2022 11:40 AM Balance remaining after transaction by customer: 3.0
+ 04/18/2022 11:40 AM Balance remaining after transaction by customer: 11.0
+ 04/18/2022 11:40 AM Balance remaining after transaction by customer: 3.0
+ 04/18/2022 11:41 AM Change dispensed to user: Quarters: 12 Dimes: 0 Nickels: 0
+ 04/18/2022 11:41 AM Money Received:5.0
+ 04/18/2022 11:41 AM Change dispensed to user: Quarters: 21 Dimes: 1 Nickels: 0
+ 04/18/2022 11:41 AM Balance remaining after transaction by customer: 3.0
+ 04/18/2022 11:41 AM User entered insufficient funds for purchase.
