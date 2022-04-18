@@ -1,8 +1,6 @@
 package com.techelevator;
 
-import org.junit.Assert;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.function.Executable;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
@@ -15,7 +13,19 @@ import static org.junit.jupiter.api.Assertions.*;
 class MoneyTest {
     @Test
     void purchaseIsCoveredShouldReturnTrue() { //make sure returns only false if less than zero, write test to pass (2 tests)
-
+        Money money = new Money();
+        BigDecimal testAmount = new BigDecimal("7.0");
+        BigDecimal balance = new BigDecimal("10.0");
+        money.addBalance(balance);
+        assertTrue(money.purchaseIsCovered(testAmount));
+    }
+    @Test
+    void purchaseIsCoveredShouldReturnFalse() { //make sure returns only false if less than zero, write test to pass (2 tests)
+        Money money = new Money();
+        BigDecimal testAmount = new BigDecimal("15.0");
+        BigDecimal balance = new BigDecimal("8.0");
+        money.addBalance(balance);
+        assertFalse(money.purchaseIsCovered(testAmount));
     }
 
     @Test
@@ -33,16 +43,14 @@ class MoneyTest {
 
     @Test
     public void testFeedMoneyException() {//test exception thrown and exception passed (2 tests)
-        assertThrows(NoSuchElementException.class, new Executable() { // since feedMoney() has a recursive catch block instead of a NumberFormatExeception it throws a NoSuchElementException - WIP
-             @Override
-            public void execute() throws Throwable {
-                Money money = new Money();
-                String testInput = "TEST";
-                InputStream in = new ByteArrayInputStream(testInput.getBytes(StandardCharsets.UTF_8));
-                System.setIn(in);
-                money.feedMoney();
-            }
-        });
+        // since feedMoney() has a recursive catch block instead of a NumberFormatExeception it throws a NoSuchElementException - WIP
+        assertThrows(NoSuchElementException.class, () -> {
+           Money money = new Money();
+           String testInput = "TEST";
+           InputStream in = new ByteArrayInputStream(testInput.getBytes(StandardCharsets.UTF_8));
+           System.setIn(in);
+           money.feedMoney();
+       });
     }
 
     @Test //runs, but points back to the feedMoney error since this calls for feedMoney inside the method we're testing
@@ -62,7 +70,6 @@ class MoneyTest {
 
     @Test
     public void testResetFunds() { //test funds reset to zero
-        Money money = new Money();
 
     }
 }

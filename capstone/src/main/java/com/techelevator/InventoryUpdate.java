@@ -92,8 +92,8 @@ public class InventoryUpdate {
                     item = new Gum(slotID, itemName, itemPrice, itemCategory);
                 }
                 products.add(item); //adding our created item to our product list
-                Log.writeToAuditLog("INVENTORY UPDATED"); //writes update to log
             }
+                Log.writeToAuditLog("INVENTORY UPDATED"); //writes update to log
         } catch (FileNotFoundException e) {
             System.err.println("The file does not exist.");
         }
@@ -103,7 +103,7 @@ public class InventoryUpdate {
     public String displayProducts() {
         String display = "";
         for (VendingMachineVends product : products) {
-            display += product.getSlotID() + "|" + product.getItemName() + ", $" + product.getItemPrice() + "\n" + "Available: " + product.getQuantity();
+            display += product.getSlotID() + "|" + product.getItemName() + ", $" + product.getItemPrice() + "\n" + "Available: " + product.getQuantity() +" ";
         } return display;
     }
 
