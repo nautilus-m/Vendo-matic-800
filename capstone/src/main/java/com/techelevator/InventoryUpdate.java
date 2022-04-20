@@ -65,7 +65,7 @@ public class InventoryUpdate {
     }
 
     public List<VendingMachineVends> readInventoryFile() throws FileNotFoundException { //exception to handle if our file already existed
-        this.file = new File("vendingmachine.csv"); //need to look at this not being hardcoded
+        this.file = new File("C:\\Users\\ktott\\Desktop\\meritamerica\\pairprogramming\\final pull\\module-1-capstone\\capstone\\vendingmachine.csv");
         if (!this.file.exists()) {
             throw new FileNotFoundException();
         }

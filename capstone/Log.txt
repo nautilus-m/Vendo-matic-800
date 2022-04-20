@@ -1,28 +1,44 @@
-
- 04/18/2022 11:01 AM Change dispensed to user: Quarters: 12 Dimes: 0 Nickels: 0
- 04/18/2022 11:01 AM Change dispensed to user: Quarters: 12 Dimes: 0 Nickels: 0
- 04/18/2022 11:02 AM Change dispensed to user: Quarters: 12 Dimes: 0 Nickels: 0
- 04/18/2022 11:04 AM Change dispensed to user: Quarters: 12 Dimes: 0 Nickels: 0
- 04/18/2022 11:04 AM Change dispensed to user: Quarters: 12 Dimes: 0 Nickels: 0
- 04/18/2022 11:05 AM Change dispensed to user: Quarters: 12 Dimes: 0 Nickels: 0
- 04/18/2022 11:05 AM Change dispensed to user: Quarters: 12 Dimes: 0 Nickels: 0
- 04/18/2022 11:06 AM Change dispensed to user: Quarters: 12 Dimes: 0 Nickels: 0
- 04/18/2022 11:11 AM Change dispensed to user: Quarters: 21 Dimes: 1 Nickels: 0
- 04/18/2022 11:11 AM Change dispensed to user: Quarters: 21 Dimes: 1 Nickels: 0
- 04/18/2022 11:14 AM Change dispensed to user: Quarters: 21 Dimes: 1 Nickels: 0
- 04/18/2022 11:23 AM Change dispensed to user: Quarters: 12 Dimes: 0 Nickels: 0
- 04/18/2022 11:38 AM Balance remaining after transaction by customer: 3.0
- 04/18/2022 11:39 AM Balance remaining after transaction by customer: 3.0
- 04/18/2022 11:40 AM Balance remaining after transaction by customer: 3.0
- 04/18/2022 11:40 AM Balance remaining after transaction by customer: 11.0
- 04/18/2022 11:40 AM Balance remaining after transaction by customer: 3.0
- 04/18/2022 11:41 AM Change dispensed to user: Quarters: 12 Dimes: 0 Nickels: 0
- 04/18/2022 11:41 AM Money Received:5.0
- 04/18/2022 11:41 AM Change dispensed to user: Quarters: 21 Dimes: 1 Nickels: 0
- 04/18/2022 11:41 AM Balance remaining after transaction by customer: 3.0
- 04/18/2022 11:41 AM User entered insufficient funds for purchase.
- 04/18/2022 11:53 AM Change dispensed to user: Quarters: 12 Dimes: 0 Nickels: 0
- 04/18/2022 11:53 AM Money Received:5.0
- 04/18/2022 11:53 AM Change dispensed to user: Quarters: 21 Dimes: 1 Nickels: 0
- 04/18/2022 11:53 AM Balance remaining after transaction by customer: 3.0
- 04/18/2022 11:53 AM User entered insufficient funds for purchase.
+ 04/20/2022 01:43 PM We're writing a little test message.
+ 04/20/2022 01:43 PM We're writing a little test message.
+ 04/20/2022 01:49 PM We're writing a little test message.
+ 04/20/2022 01:50 PM We're writing a little test message.
+ 04/20/2022 01:51 PM INVENTORY UPDATED
+ 04/20/2022 01:51 PM Money Received:5.0
+ 04/20/2022 01:51 PM Slot ID of product requested: A1
+ 04/20/2022 01:51 PM Amount of items requested by user: 2
+ 04/20/2022 01:51 PM User entered insufficient funds for purchase.
+ 04/20/2022 01:51 PM Money Received:15.0
+ 04/20/2022 01:51 PM Amount of items requested by user: 1
+ 04/20/2022 01:51 PM Item dispensed: POTATO CRISPS | Quantity dispensed: 1
+ 04/20/2022 01:51 PM Current inventory of item purchased: 4
+ 04/20/2022 01:51 PM Balance remaining after transaction by customer: 11.95
+ 04/20/2022 01:51 PM Change dispensed to user: Quarters: 47 Dimes: 2 Nickels: 0
+ 04/20/2022 01:51 PM Balance in machine after change dispensed: 0
+ 04/20/2022 01:51 PM INVENTORY UPDATED
+ 04/20/2022 01:51 PM Money Received:5.0
+ 04/20/2022 01:52 PM Slot ID of product requested: A1
+ 04/20/2022 01:52 PM Amount of items requested by user: 1
+ 04/20/2022 01:52 PM Item dispensed: POTATO CRISPS | Quantity dispensed: 1
+ 04/20/2022 01:52 PM Current inventory of item purchased: 4
+ 04/20/2022 01:52 PM Balance remaining after transaction by customer: 1.95
+ 04/20/2022 01:52 PM Change dispensed to user: Quarters: 7 Dimes: 2 Nickels: 0
+ 04/20/2022 01:52 PM Balance in machine after change dispensed: 0
+ 04/20/2022 01:53 PM INVENTORY UPDATED
+ 04/20/2022 01:54 PM Money Received:5.0
+ 04/20/2022 01:54 PM Slot ID of product requested: A1
+ 04/20/2022 01:54 PM Amount of items requested by user: 1
+ 04/20/2022 01:54 PM Item dispensed: POTATO CRISPS | Quantity dispensed: 1
+ 04/20/2022 01:54 PM Current inventory of item purchased: 4
+ 04/20/2022 01:54 PM Balance remaining after transaction by customer: 1.95
+ 04/20/2022 01:54 PM Money Received:6.95
+ 04/20/2022 01:58 PM INVENTORY UPDATED
+ 04/20/2022 02:00 PM INVENTORY UPDATED
+ 04/20/2022 02:00 PM INVENTORY UPDATED
+ 04/20/2022 02:00 PM Money Received:1.0
+ 04/20/2022 02:00 PM Slot ID of product requested: A1
+ 04/20/2022 02:14 PM INVENTORY UPDATED
+ 04/20/2022 02:14 PM Money Received:5.0
+ 04/20/2022 02:14 PM INVENTORY UPDATED
+ 04/20/2022 02:14 PM Money Received: $ 10.00
+ 04/20/2022 02:15 PM INVENTORY UPDATED
+ 04/20/2022 02:15 PM Money Received: $10.00

@@ -2,6 +2,7 @@ package com.techelevator;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Money {
@@ -40,8 +41,8 @@ public class Money {
             for (double bill : billArr) {
                 if (bill == moneyReceived) {
                     addBalance(BigDecimal.valueOf(moneyReceived));
-                    System.out.println("Money in machine: " + this.balance);
-                    Log.writeToAuditLog("Money Received:" + this.balance);
+                    System.out.println("Money in machine: $" + String.format("%.2f", this.balance));
+                    Log.writeToAuditLog("Money Received: $" + String.format("%.2f", this.balance));
                     return true;
                 }
             }

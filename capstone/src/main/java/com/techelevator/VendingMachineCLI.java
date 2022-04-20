@@ -29,11 +29,13 @@ public class VendingMachineCLI {
 
     public void run() throws FileNotFoundException {
         inventoryUpdate.readInventoryFile(); //should only run at start of program
-        System.out.println("************** Welcome to the VENDO-MATIC 800 **********" +
+        System.out.println("************** Welcome to the VENDO-MATIC 800 **************" +
                 "\n Please choose from the following menu options: ");
         while (true) {
             String choice = (String) menu.getChoiceFromOptions(MAIN_MENU_OPTIONS);
-            if (choice.equals(MAIN_MENU_OPTION_DISPLAY_ITEMS)) {
+            if (choice.equals(MAIN_MENU_OPTION_EXIT)) {
+                exit();
+            } else if (choice.equals(MAIN_MENU_OPTION_DISPLAY_ITEMS)) {
                 System.out.println(inventoryUpdate.displayProducts() + "\r"); // displays vending machine items
                 System.out.println("Please select 2 to PURCHASE or 3 to EXIT >>>>> ");
             } else if (choice.equals(MAIN_MENU_OPTION_PURCHASE)) {
@@ -65,8 +67,6 @@ public class VendingMachineCLI {
                         money.changeCalculator(); //run change back method, provides change dispensed output to user
                         money.resetFunds();
                         Log.writeToAuditLog("Balance in machine after change dispensed: " + money.getBalance());
-                        exit();
-                    } else if (choice.equals(MAIN_MENU_OPTION_EXIT)) {
                         exit();
                     }
                 }
